@@ -16,8 +16,8 @@ Fungsi: Menampilkan seluruh riwayat gacha yang pernah dilakukan oleh user terten
 
 3. Melihat Kuota Hadiah
 
-URL:** `GET /api/gacha/prizes`
-Fungsi:** Menampilkan daftar semua hadiahnya, kuota awal, dan sisa kuota yang tersedia saat ini
+URL: `GET /api/gacha/prizes`
+Fungsi: Menampilkan daftar semua hadiahnya, kuota awal, dan sisa kuota yang tersedia saat ini
 
 4. Melihat Daftar Pemenang
 
