@@ -1,18 +1,24 @@
-# Backend Programming Template (2025)
+## Dokumentasi Endpoint Gacha
 
-## Development Setup
+Daftar endpoint yang bisa diakses untuk sistem undian gacha:
 
-1. Fork and clone this repository to your local computer.
-2. Open the project using VS Code.
-3. Install the recommended VS Code extensions: `ESLint` and `Prettier`.
-4. Copy and rename `.env.example` to `.env`. Open `.env` and change the database connection string.
-5. Run `npm install` to install the project dependencies.
-6. Run `npm run dev` to start the dev server.
-7. Test the endpoints in the API client app.
+1. **Gacha**
 
-## Add New API Endpoints
+   - **URL:** `POST /api/gacha/play`
+   - **Body (JSON):** `{ "user_name": "Nama User" }`
+   - **Fungsi:** Mengeksekusi undian, sesuai ketentuan hanya bisa dilakukan maksimal 5x sehari per user, mengembalikan response hadiah jika menang, atau zonk jika kalah/kuota habis
 
-1. Create a new database schema in `./src/models`.
-2. Create a new folder in `./src/api/components` (if needed). Remember to separate your codes to repositories, services, controllers, and routes.
-3. Add the new route in `./src/api/routes.js`.
-4. Test your new endpoints in the API client app.
+2. **Melihat Histori Gacha User (Bonus 1)**
+
+   - **URL:** `GET /api/gacha/history?user_name=Nama User`
+   - **Query Parameter:** `user_name`
+   - **Fungsi:** Menampilkan seluruh riwayat gacha yang pernah dilakukan oleh user tertentu beserta hadiahnya
+
+3. **Melihat Kuota Hadiah (Bonus 2)**
+
+   - **URL:** `GET /api/gacha/prizes`
+   - **Fungsi:** Menampilkan daftar semua hadiahnya, kuota awal, dan sisa kuota yang tersedia saat ini
+
+4. **Melihat Daftar Pemenang (Bonus 3)**
+   - **URL:** `GET /api/gacha/winners`
+   - **Fungsi:** Menampilkan daftar nama user yang telah memenangkan setiap kategori hadiah, Nama usernya disamarin untuk menjaga privasi sesuai ketentuan
