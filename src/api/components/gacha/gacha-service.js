@@ -8,7 +8,7 @@ async function playGacha(userName) {
   if (todayCount >= 5) {
     throw errorResponder(
       errorTypes.UNPROCESSABLE_ENTITY,
-      'Limit gacha harian sudah habis (maksimal 5 kali per hari).'
+      'Limit gacha harian sudah habis (maksimal 5 per hari).'
     );
   }
 
@@ -36,8 +36,8 @@ async function playGacha(userName) {
 
   return {
     message: isWin
-      ? 'Selamat! Anda menang hadiah.'
-      : 'Maaf, Anda belum beruntung.',
+      ? 'Yay, selamat, kamu menang hadiah.'
+      : 'Whoops, kamu belum beruntung.',
     prize: wonPrize,
   };
 }
