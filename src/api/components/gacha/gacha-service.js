@@ -36,8 +36,8 @@ async function playGacha(userName) {
 
   return {
     message: isWin
-      ? 'Yay, selamat, kamu menang hadiah.'
-      : 'Whoops, kamu belum beruntung.',
+      ? 'Yay, selamat, kamu menang hadiah'
+      : 'Whoops, kamu belum beruntung',
     prize: wonPrize,
   };
 }

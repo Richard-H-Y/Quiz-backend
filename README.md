@@ -5,7 +5,7 @@ Daftar endpoint yang bisa diakses untuk sistem undian gacha:
 1. Gacha
 
 URL: `POST /api/gacha/play`
-Body (JSON): `{ "user_name": "Nama User" }`
+Body: `{ "user_name": "Nama User" }`
 Fungsi: Mengeksekusi undian, sesuai ketentuan hanya bisa dilakukan maksimal 5x sehari per user, mengembalikan response hadiah jika menang, atau zonk jika kalah/kuota habis
 
 2. Melihat Histori Gacha User
